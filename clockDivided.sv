@@ -20,4 +20,21 @@ end
 
 endmodule
 
+module clockDivided_tb;
+    reg clock;
+    wire resultClk;
+    clockDivided uut0 (
+        .clock(clock),
+        .resultClk(resultClk)
+    );
+
+   
+  
+   
+    initial
+          clock = 1'b0;
+     always
+	  #10 clock = ~clock;
+		 
+endmodule 
 
